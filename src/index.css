@@ -1,14 +1,94 @@
 body {
-  margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background-color: #fafafafa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.app {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+}
+
+.container-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 2px;
+}
+
+.container-form input,
+.container-form button {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.container-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.container-list li {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.container-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  grid-column-gap: 2px;
+}
+
+.container-list-item .btn-circle {
+  padding: 8px;
+  border: none;
+}
+
+.message {
+  border: 1px solid #ff6e40;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ff9e80;
+  text-align: center;
+  color: white;
+}
+
+.container-form .btn-succcess {
+  background-color: #00e676;
+}
+
+.btn {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  color: #263238;
+}
+
+.btn-success {
+  background-color: #00e676;
+}
+
+.btn-edit {
+  background-color: #ffeb3b;
+}
+
+.btn-delete {
+  background-color: #ff5722;
+}
+
+.input-edit {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
 }
