@@ -7,11 +7,11 @@ export default class Form extends Component {
       <form onSubmit={onSubmit} className="container-form">
         <input
           type="text"
-          placeholder="Masukkan nama mahasiswa"
+          placeholder="Nama mahasiswa"
           onChange={onChange}
           value={name}
         />
-        <button className="btn-succcess">Submit</button>
+        <button className="btn-succcess">Simpan</button>
       </form>
     );
   }

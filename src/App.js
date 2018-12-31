@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "./Form";
 import uuidv1 from "uuid/v1";
 import List from "./List";
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
@@ -12,6 +13,14 @@ class App extends Component {
       id: ""
     };
   }
+
+  componentWillMount = () => {
+    axios.get("http://localhost:9000/users").then(res => {
+      this.setState({
+        list: res.data.data
+      });
+    });
+  };
 
   onChange = e => {
     this.setState({
@@ -75,6 +84,7 @@ class App extends Component {
     const { name, list, id } = this.state;
     return (
       <div className="app">
+        <header className="container-header">Daftar Nama Mahasiswa</header>
         <div className="container">
           <Form onChange={this.onChange} onSubmit={this.onSubmit} name={name} />
           <List
@@ -88,6 +98,13 @@ class App extends Component {
       </div>
     );
   }
+  componentDidMount = () => {
+    console.log("hallow");
+  };
+
+  componentWillUnmount = () => {
+    console.log("componentwillmount");
+  };
 }
 
 export default App;
